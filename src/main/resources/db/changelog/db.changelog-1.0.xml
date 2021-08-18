@@ -4,11 +4,14 @@
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
                       http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
-    <changeSet  author="authorName"  id="changelog-1.0">
-        <createTable  tableName="TablesAndTables">
-            <column  name="COLUMN1"  type="TEXT">
-                <constraints  nullable="true"  primaryKey="false"  unique="false"/>
-            </column>
-        </createTable>
+    <changeSet  author="deepak"  id="changelog-1.0">
+       <addColumn tableName="users" schemaName="liquiebaseDemo">
+           <column name="fatherName" type="varchar(255)"/>
+       </addColumn>
+    </changeSet>
+    <changeSet id="" author="deepaki">
+        <delete tableName="users" schemaName="liquiebaseDemo">
+            <where>name='userTest1'</where>
+        </delete>
     </changeSet>
 </databaseChangeLog>
